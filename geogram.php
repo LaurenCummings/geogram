@@ -8,7 +8,7 @@ if(!empty($_GET['location'])) {
 	$lat = $maps_array['results'][0]['geometry']['location']['lat'];
 	$lng = $maps_array['results'][0]['geometry']['location']['lng'];
 
-	$instagram_url = 'https://api.instagram.com/v1/media/search?lat=' . $lat . '&lng=' . $lng . '&client_id=00a34770f15e45bda3d0a495d478e875';
+	$instagram_url = 'https://api.instagram.com/v1/media/search?lat=' . $lat . '&lng=' . $lng . '&client_id=CLIENT_ID';
 
 	$instagram_json = file_get_contents($instagram_url);
 	$instagram_array = json_decode($instagram_json, true);
